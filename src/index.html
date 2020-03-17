@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Book Finder</title>
+  </head>
+  <body>
+    <main>
+      <div id="header">
+        <h1>Book Finder</h1>
+        <h2>What book would you like to find?</h2>
+        <form>
+          <div>
+            <input type="text" max="150" placeholder="Author, title, category ..." required>
+            <button class="clear-icon" type="reset"></button>
+            <button  class="btn-submit" typu="submit">Search</button>
+          </div>
+        </form>
+      </div>
+      <div id="loader">
+        <div class="preloader"></div>
+      </div>
+      <div id="books-container" class="container"></div>
+    </main>
+  </body>
+</html>
