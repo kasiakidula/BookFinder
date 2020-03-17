@@ -1,0 +1,51 @@
+{{#each items}}
+<div class="book-card">
+	<h3 class="book-title">
+		<a class="book-link" href={{volumeInfo.infoLink}} target="_blank">{{volumeInfo.title}}</a>
+	</h3>
+	
+	<div class="book-details">
+		{{#if volumeInfo.imageLinks.smallThumbnail}}
+			<img class="book-image" src={{volumeInfo.imageLinks.smallThumbnail}} alt="'{{volumeInfo.title}}' book cover">
+		{{else}}
+			<div class="blank-img"></div>
+		{{/if}}
+
+		<ul class="book-info">
+
+			<li><strong>Author: </strong>
+				{{#each volumeInfo.authors}}
+					{{this}}					
+				{{/each}}
+			</li>
+
+			{{#if volumeInfo.publisher}}
+			<li><strong>Publisher: </strong>
+				{{volumeInfo.publisher}}
+			{{/if}}
+			</li>
+
+			{{#if volumeInfo.publishedDate}}
+			<li><strong>Published: </strong>
+				{{volumeInfo.publishedDate}}
+			{{/if}}
+			</li>
+
+			{{#if volumeInfo.categories}}
+			<li><strong>Category: </strong>
+				{{#each volumeInfo.categories}}
+					{{this}}
+				{{/each}}
+			{{/if}}
+			</li>
+
+			{{#if volumeInfo.subtitle}}
+			<li>
+				{{volumeInfo.subtitle}}
+			{{/if}}
+			</li>
+
+		</ul>
+	</div>
+</div>
+{{/each}}
