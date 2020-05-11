@@ -16,6 +16,7 @@ h1, h2, h3, p{
 }
 main{
 	max-width: 900px;
+	min-width: 320px;
 	margin: auto;
 	padding: .5rem;
 	text-align: center;
@@ -28,6 +29,9 @@ main{
 	margin-bottom: 2rem;
 }
 form{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	margin-bottom: 1rem;
 }
 form input[type="text"]{
@@ -43,7 +47,7 @@ form .clear-icon {
 	position: relative;
 	margin: 0;
 	padding: 5px 0;
-	border:1px solid transparent;
+	border: 1px solid transparent;
 	background-color: transparent;
 	display: inline-block;
 	vertical-align: middle;
@@ -53,8 +57,8 @@ form .clear-icon {
 form .clear-icon:after {
 	content: "X";
 	display: block;
-	width: 18px;
-	height: 18px;
+	width: 20px;
+	height: 17px;
 	position: absolute;
 	background-color: #808080;
 	z-index:1;
@@ -130,15 +134,17 @@ form .btn-submit:hover{
 	display: none;
 }
 .container {
+	width: 100%;
 	display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-column-gap: 3rem;
+    grid-row-gap: 1rem;
     justify-content: center;
     margin: auto;
-    padding: 1rem 0;    
+    padding: 1rem 0;  
 }
 .book-card{
-	width: 20rem;
+	width: 17rem;
     height: 15rem auto;
     padding: .5rem;
     background: #fff;
@@ -166,18 +172,19 @@ form .btn-submit:hover{
 	display: flex;
 	direction: row;
 	justify-content: start;
+	align-items: center;
 }
 .book-image{
-	width: 8rem;
-	height: 12rem;
+	width: 6rem;
+	height: 10rem;
 }
 .blank-img{
-	width: 8rem;
-	height: 12rem;
+	width: 6rem;
+	height: 10rem;
 	background-color: #FFFFFF;
 }
 .book-info{
-	width: 12rem;
+	width: 10rem;
 	margin: 0;
 	padding: 0 0 0 .5rem;
 	list-style: none;
@@ -197,12 +204,23 @@ form .btn-submit:hover{
 	box-shadow: 0 5px 10px rgba(0,0,0,.19), 0 3px 3px rgba(0,0,0,.23);
 	cursor: pointer;
 }
+@media (max-width: 605px){ 
+	.container {
 
+	}
+}
 @media (max-width: 435px){
+	main{
+		padding: 0;
+	}
 	#header h2 {
 		margin-bottom: 1rem;
 	}
-	form button{
-		margin: 0;
+	form{
+		flex-direction: column;
+		align-items: center;
+	}
+	.btn-submit {
+		margin-top: .8rem;
 	}
 }
