@@ -57,8 +57,8 @@ form .clear-icon {
 form .clear-icon:after {
 	content: "X";
 	display: block;
-	width: 20px;
-	height: 17px;
+	width: 1.5rem;
+	height: 1.5rem;
 	position: absolute;
 	background-color: #808080;
 	z-index:1;
@@ -66,12 +66,12 @@ form .clear-icon:after {
 	top: 0;
 	bottom: 5px;
 	margin: auto;
-	padding: 3px;
 	border-radius: 50%;
 	text-align: center;
 	color: white;
+	font-family: 'Roboto Slab', serif;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 1rem;
 	cursor: pointer;
 }
 input[type="text"]:not(:valid) ~ .clear-icon:after {
